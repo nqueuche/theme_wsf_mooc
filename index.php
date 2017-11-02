@@ -28,20 +28,20 @@
 						<?php $taxonomyTerms = get_terms( $taxonomyType ) ?>
                         <ul class="filters menu__list col-xs-4" data-filter-group="<?php echo $taxonomyType ?>">
                             <b class="menu__title"><?php echo $taxonomyType ?></b>
-                            <li class="menu__list__item">
-                                <div data-filter="" class="item">
+                            <li>
+                                <button data-filter="" class="item menu__list__item">
                                     Tout
-                                </div>
+                                </button>
                             </li>
 
 							<?php if ( count( $taxonomyTerms ) > 0 ) : ?>
 								<?php foreach ( $taxonomyTerms as $taxonomyTerm ) : ?>
 
                                     <li>
-                                        <div class="item menu__list__item"
+                                        <button class="item menu__list__item"
                                              data-filter='.<?php echo $taxonomyTerm->slug ?>'>
 											<?php echo $taxonomyTerm->name ?>
-                                        </div>
+                                        </button>
                                     </li>
 
 								<?php endforeach; ?>
@@ -63,17 +63,17 @@
                             <b class="menu__title"><?php echo $fieldType['name'] ?></b>
 
                             <li>
-                                <div data-filter="" class="item menu__list__item">
+                                <button data-filter="" class="item menu__list__item">
                                     Tout
-                                </div>
+                                </button>
                             </li>
 
 							<?php foreach ( $fieldTerms as $fieldTerm ) : ?>
                                 <li>
-                                    <div class="item menu__list__item"
+                                    <button class="item menu__list__item"
                                          data-filter='.<?php echo $fieldTerm ?>'>
 										<?php echo $fieldTerm ?>
-                                    </div>
+                                    </button>
                                 </li>
 
 							<?php endforeach; ?>

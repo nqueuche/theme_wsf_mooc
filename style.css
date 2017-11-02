@@ -434,7 +434,9 @@ padding-top: 20px;
 .box {
   margin: 30px;
 }
-
+ button {
+   border: none;
+ }
 
 
 
