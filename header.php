@@ -31,11 +31,9 @@ $logo           = wp_get_attachment_image_src( $custom_logo_id, 'full' );
                         <img alt="Brand" src="<?php echo $logo[0] ?>"></a>
                 </div>
                 <div class="col-md-4 col-md-offset-5">
-                    <form action="<?php echo home_url( '/' ); ?>" method="get" class="navbar__search">
-                        <input type="text" placeholder="<?php _e("Search","moocable"); ?>" value="<?php the_search_query(); ?>" class="navbar__search__input">
-                        <span class="input-group-btn">
-                            <button type="submit" class="navbar__search__submit"><?php _e("Search","moocable"); ?></button>
-                        </span>
+                    <form role="search"  method="get"  action="<?php echo home_url( '/' ); ?>" class="navbar__search">
+                        <input type="text" placeholder="Rechercher un cours" class="navbar__search__input"  name="s" id="s">
+                        <input type="submit" class="navbar__search__submit">
                     </form>
                 </div>
                 <div class="col-md-2 navbar__user">

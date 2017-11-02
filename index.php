@@ -3,7 +3,7 @@
     <div class="announcement">
         <div class="row">
             <div class="col-md-9">
-                <img src="./assets/images/mooc-img.png" class="announcement__image" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/mooc-img.png"  class="announcement__image"/>
             </div>
             <div class="col-md-3">
                 <a href="#" class="announcement__button">En savoir plus</a>
@@ -53,7 +53,7 @@
 				<?php endif; ?>
             </div>
             <div class="col-xs-12 more">
-                <button type="button" class="btn btn-info center-block"  data-toggle="collapse" data-target="#advanced">Voir plus</button>
+                <a type="button" class="glyphicon glyphicon-chevron-down center"  data-toggle="collapse" data-target="#advanced"></a>
             </div>
             <div id="advanced" class="collapse">
 				<?php if ( count( $fieldTypes ) > 0 ) : ?>
