@@ -26,7 +26,7 @@
 				<?php if ( count( $taxonomyTypes ) > 0 ) : ?>
 					<?php foreach ( $taxonomyTypes as $taxonomyType ) : ?>
 						<?php $taxonomyTerms = get_terms( $taxonomyType ) ?>
-                        <ul class="filters menu__list col-xs-4" data-filter-group="<?php echo $taxonomyType ?>">
+                        <ul class="filters menu__list col-sm-4 col-xs-12" data-filter-group="<?php echo $taxonomyType ?>">
                             <b class="menu__title"><?php echo $taxonomyType ?></b>
                             <li>
                                 <button data-filter="" class="item menu__list__item">
@@ -59,7 +59,7 @@
 				<?php if ( count( $fieldTypes ) > 0 ) : ?>
 					<?php foreach ( $fieldTypes as $fieldType ) : ?>
 						<?php $fieldTerms = $fieldType['choices'];?>
-                        <ul class="filters menu__list col-xs-3" data-filter-group="<?php echo $fieldType['label'] ?>">
+                        <ul class="filters menu__list col-sm-3 col-xs-12" data-filter-group="<?php echo $fieldType['label'] ?>">
                             <b class="menu__title"><?php echo $fieldType['name'] ?></b>
 
                             <li>
