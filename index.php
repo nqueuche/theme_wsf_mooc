@@ -2,18 +2,18 @@
 <div class="container">
     <div class="announcement">
         <div class="row">
-            <div class="col-md-9">
+            <div class="col-md-12">
+                <a href="#">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/mooc-img.png"  class="announcement__image"/>
+                </a>
             </div>
-            <div class="col-md-3">
-                <a href="#" class="announcement__button">En savoir plus</a>
-            </div>
+
         </div>
     </div>
 
 
     <div class="menu">
-        <div class="container-fluid">
+        <div class="container-fluid button-group">
             <div class="row">
 
 				<?php
@@ -26,7 +26,7 @@
 				<?php if ( count( $taxonomyTypes ) > 0 ) : ?>
 					<?php foreach ( $taxonomyTypes as $taxonomyType ) : ?>
 						<?php $taxonomyTerms = get_terms( $taxonomyType ) ?>
-                        <ul class="filters menu__list col-sm-4 col-xs-12" data-filter-group="<?php echo $taxonomyType ?>">
+                        <ul class="filters menu__list col-sm-4" data-filter-group="<?php echo $taxonomyType ?>">
                             <b class="menu__title"><?php echo $taxonomyType ?></b>
                             <li>
                                 <button data-filter="" class="item menu__list__item">
@@ -59,7 +59,7 @@
 				<?php if ( count( $fieldTypes ) > 0 ) : ?>
 					<?php foreach ( $fieldTypes as $fieldType ) : ?>
 						<?php $fieldTerms = $fieldType['choices'];?>
-                        <ul class="filters menu__list col-sm-3 col-xs-12" data-filter-group="<?php echo $fieldType['label'] ?>">
+                        <ul class="filters menu__list col-sm-3" data-filter-group="<?php echo $fieldType['label'] ?>">
                             <b class="menu__title"><?php echo $fieldType['name'] ?></b>
 
                             <li>

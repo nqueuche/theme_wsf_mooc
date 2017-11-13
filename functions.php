@@ -119,7 +119,7 @@ add_action( 'widgets_init', 'moocable_widgets_init' );
  * Enqueue scripts and styles.
  */
 function moocable_scripts() {
-	wp_enqueue_style( 'moocable-bootstrap', '//bootswatch.com/paper/bootstrap.min.css');
+	wp_enqueue_style( 'moocable-bootstrap', '//bootswatch.com/3/paper/bootstrap.min.css');
 	wp_enqueue_style( 'moocable-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'moocable-tether', '//cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js', array(), '20151215', true );

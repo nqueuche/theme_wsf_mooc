@@ -23,9 +23,10 @@ jQuery(function ($) {
         return value;
     }
 
-    $('button').click(function(){
+    $('button').on('click', function(){
         $('button.selected').removeClass('selected');
         $(this).addClass('selected');
+
     });
 
 
