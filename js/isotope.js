@@ -23,10 +23,12 @@ jQuery(function ($) {
         return value;
     }
 
-    $('button').on('click', function(){
-        $('button.selected').removeClass('selected');
-        $(this).addClass('selected');
-
+    $('.filters').each( function( i, buttonGroup ) {
+        var $buttonGroup = $( buttonGroup );
+        $buttonGroup.on( 'click', 'button', function() {
+            $buttonGroup.find('.selected').removeClass('selected');
+            $( this ).addClass('selected');
+        });
     });
 
 
