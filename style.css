@@ -34,9 +34,6 @@ nav .navbar-brand {
     max-height: 64px; }
 
 .search {
-  line-height: 64px;
-  height: 64px;
-  white-space: nowrap;
   padding: 15px; }
   .search form, .search label, .search input {
     height: 34px;
@@ -319,24 +316,56 @@ li {
   border-color: #ea5b0c;
 }
 
-.design .showcase__colour::after {
+.design.approfondissement .showcase__colour::after {
   background: #ea5b0c url('./assets/images/icons/medal.png') no-repeat center center;
+}
+
+.design.soutien .showcase__colour::after {
+  background: #ea5b0c url('./assets/images/icons/brain.png') no-repeat center center;
+}
+
+.design.substitution .showcase__colour::after {
+  background: #ea5b0c url('./assets/images/icons/graduation.png') no-repeat center center;
 }
 
 .marketing .showcase__colour {
   border-color: #0000ff;
 }
 
-.marketing .showcase__colour::after {
+.marketing.approfondissement .showcase__colour::after {
   background: #0000ff url('./assets/images/icons/medal.png') no-repeat center center;
+}
+
+.marketing.approfondissement .showcase__colour::after {
+  background: #0000ff url('./assets/images/icons/medal.png') no-repeat center center;
+}
+
+.marketing.soutien .showcase__colour::after {
+  background: #0000ff url('./assets/images/icons/brain.png') no-repeat center center;
+}
+
+.marketing.substitution .showcase__colour::after {
+  background: #0000ff url('./assets/images/icons/graduation.png') no-repeat center center;
 }
 
 .tech .showcase__colour {
   border-color: #297825;
 }
 
-.tech .showcase__colour::after {
+.tech.approfondissement .showcase__colour::after {
   background: #297825 url('./assets/images/icons/medal.png') no-repeat center center;
+}
+
+.tech.approfondissement .showcase__colour::after {
+  background: #297825 url('./assets/images/icons/medal.png') no-repeat center center;
+}
+
+.tech.soutien .showcase__colour::after {
+  background: #297825 url('./assets/images/icons/brain.png') no-repeat center center;
+}
+
+.tech.substitution .showcase__colour::after {
+  background: #297825 url('./assets/images/icons/graduation.png') no-repeat center center;
 }
 
 .single {

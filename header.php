@@ -28,13 +28,12 @@ $logo           = wp_get_attachment_image_src( $custom_logo_id, 'full' );
             <div class="container">
                 <div class="col-xs-3">
                     <a class="navbar__logo" href="<?php echo home_url(); ?>">
-                        <img alt="Brand" src="<?php echo $logo[0] ?>"></a>
+                        <img src="<?php echo $logo[0] ?>"></a>
                 </div>
             <div class="col-xs-3"></div>
                 <div class="col-xs-3">
                     <form role="search"  method="get"  action="<?php echo home_url( '/' ); ?>" class="navbar__search">
                         <input type="text" placeholder="Rechercher un cours" class="navbar__search__input"  name="s" id="s">
-                        <input type="submit" class="navbar__search__submit">
                     </form>
                 </div>
                 <div class="col-xs-3 navbar__user">

@@ -5,6 +5,7 @@ $taxonomyTypes = get_object_taxonomies( 'course' );
 $fieldTypes = get_field_objects();
 
 ?>
+
 <div class="container">
     <div class="single">
 		<?php if (have_posts()) : ?>
@@ -22,39 +23,18 @@ $fieldTypes = get_field_objects();
                 </div>
                 <div class="row">
                     <div class="col-xs-12 single__categories">
-						<?php /*if ( count( $taxonomyTypes ) > 0 ) : */?><!--
-							<?php /*foreach ( $taxonomyTypes as $taxonomyType ) : */?>
-								<?php /*$taxonomyTerms = get_terms( $taxonomyType ) */?>
-							<?php /*endforeach; */?>
-						<?php /*endif; */?>
-	                    <?php /*if ( count( $taxonomyTerms ) > 0 ) : */?>
-		                    <?php /*foreach ( $taxonomyTerms as $taxonomyTerm ) : */?>
 
-                                <li>
-                                    <div class="item menu__list__item"
-                                         data-filter='.<?php /*echo $taxonomyTerm->slug */?>'>
-					                    <?php /*echo $taxonomyTerm->name */?>
-                                    </div>
-                                </li>
-
-		                    <?php /*endforeach; */?>
-	                    --><?php /*endif; */?>
                     </div>
                 </div>
 				<?php while (have_posts()) : the_post(); ?>
                 <div class="row">
                     <div class="col-xs-12">
-						<?php if( $fieldTypes ) : ?>
                             <ul class="single__list">
-								<?php foreach( $fieldTypes as $fieldType ) : ?>
-
-									<?php echo '<div>'; ?>
-									<?php echo '<b>' . $fieldType['label'] . '</b>'; ?>
-									<?php echo $fieldType['value']; ?>
-									<?php echo '</div>'; ?>
-								<?php endforeach; ?>
+	                            <li><span class="glyphicon glyphicon-time" aria-hidden="true"></span><b> Durée du cours : </b><?php echo get_field('duree'); ?></li><br>
+	                            <li><span class="glyphicon glyphicon-comment" aria-hidden="true"></span><b> Langue : </b><?php echo get_field('langue'); ?></li><br>
+	                            <li><span class="glyphicon glyphicon-new-window" aria-hidden="true"></span><b> Plateforme : </b><?php echo get_field('plateforme'); ?></li><br>
+	                            <li><span class="glyphicon glyphicon-certificate" aria-hidden="true"></span><b> Certification : </b><?php echo get_field('certification'); ?></li>
                             </ul>
-						<?php endif; ?>
                     </div>
 
                 </div>
@@ -69,7 +49,7 @@ $fieldTypes = get_field_objects();
                 <div class="row">
                     <div class="link_course">
                         <div class="col-xs-12 single__button__container">
-                            <a href="" class="single__button">Acceder au cours</a>
+                            <a href="<?php echo get_field('lien'); ?>" class="single__button">Acceder au cours</a>
                         </div>
                     </div>
                 </div>
@@ -77,7 +57,7 @@ $fieldTypes = get_field_objects();
         </div>
 
 
-		<?php
+        <?php
 
 		$terms = get_the_terms( $post->ID, 'annee' );
 		if ( !empty( $terms ) ){

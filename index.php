@@ -17,10 +17,8 @@
             <div class="row">
 
 				<?php
-
 				$taxonomyTypes = get_object_taxonomies( 'course' );
 				$fieldTypes = get_field_objects();
-
 				?>
 
 				<?php if ( count( $taxonomyTypes ) > 0 ) : ?>

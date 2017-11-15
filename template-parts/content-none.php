@@ -11,40 +11,21 @@
 
 <section class="no-results not-found">
 	<header class="page-header">
-		<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'moocable' ); ?></h1>
+		<h3 class="page-title"><?php esc_html_e( 'Aucun contenu ne correspond à votre recherche', 'moocable' ); ?></h3>
 	</header><!-- .page-header -->
 
 	<div class="page-content">
 		<?php
 		if ( is_home() && current_user_can( 'publish_posts' ) ) : ?>
 
-			<p><?php
-				printf(
-					wp_kses(
-						/* translators: 1: link to WP admin new post page. */
-						__( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'moocable' ),
-						array(
-							'a' => array(
-								'href' => array(),
-							),
-						)
-					),
-					esc_url( admin_url( 'post-new.php' ) )
-				);
-			?></p>
-
 		<?php elseif ( is_search() ) : ?>
 
-			<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'moocable' ); ?></p>
+			<p><?php esc_html_e( "Votre recherche n'a pas pu aboutir. Veuillez reessayer avec des mots-clés différents." , 'moocable' ); ?></p>
 			<?php
-				get_search_form();
-
 		else : ?>
 
-			<p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'moocable' ); ?></p>
+			<p><?php esc_html_e( 'On dirait que vous ne trouvez pas ce que vous cherchez. Peut-être un recherche pourrait vous aider.', 'moocable' ); ?></p>
 			<?php
-				get_search_form();
-
 		endif; ?>
 	</div><!-- .page-content -->
 </section><!-- .no-results -->
