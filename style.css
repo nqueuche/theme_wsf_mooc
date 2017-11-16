@@ -317,15 +317,18 @@ li {
 }
 
 .design.approfondissement .showcase__colour::after {
-  background: #ea5b0c url('./assets/images/icons/medal.png') no-repeat center center;
+  background: #ea5b0c url('./assets/images/icons/medal.svg') no-repeat center center;
+  background-size: 30px 30px;
 }
 
 .design.soutien .showcase__colour::after {
-  background: #ea5b0c url('./assets/images/icons/brain.png') no-repeat center center;
+  background: #ea5b0c url('./assets/images/icons/intelligence.svg') no-repeat center center;
+  background-size: 30px 30px;
 }
 
 .design.substitution .showcase__colour::after {
-  background: #ea5b0c url('./assets/images/icons/graduation.png') no-repeat center center;
+  background: #ea5b0c url('./assets/images/icons/graduation.svg') no-repeat center center;
+  background-size: 30px 30px;
 }
 
 .marketing .showcase__colour {
@@ -333,19 +336,18 @@ li {
 }
 
 .marketing.approfondissement .showcase__colour::after {
-  background: #0000ff url('./assets/images/icons/medal.png') no-repeat center center;
-}
-
-.marketing.approfondissement .showcase__colour::after {
-  background: #0000ff url('./assets/images/icons/medal.png') no-repeat center center;
+  background: #0000ff url('./assets/images/icons/medal.svg') no-repeat center center;
+  background-size: 30px 30px;
 }
 
 .marketing.soutien .showcase__colour::after {
-  background: #0000ff url('./assets/images/icons/brain.png') no-repeat center center;
+  background: #0000ff url('./assets/images/icons/intelligence.svg') no-repeat center center;
+  background-size: 30px 30px;
 }
 
 .marketing.substitution .showcase__colour::after {
-  background: #0000ff url('./assets/images/icons/graduation.png') no-repeat center center;
+  background: #0000ff url('./assets/images/icons/graduation.svg') no-repeat center center;
+  background-size: 30px 30px;
 }
 
 .tech .showcase__colour {
@@ -353,19 +355,18 @@ li {
 }
 
 .tech.approfondissement .showcase__colour::after {
-  background: #297825 url('./assets/images/icons/medal.png') no-repeat center center;
-}
-
-.tech.approfondissement .showcase__colour::after {
-  background: #297825 url('./assets/images/icons/medal.png') no-repeat center center;
+  background: #297825 url('./assets/images/icons/medal.svg') no-repeat center center;
+  background-size: 30px 30px;
 }
 
 .tech.soutien .showcase__colour::after {
-  background: #297825 url('./assets/images/icons/brain.png') no-repeat center center;
+  background: #297825 url('./assets/images/icons/intelligence.svg') no-repeat center center;
+  background-size: 30px 30px;
 }
 
 .tech.substitution .showcase__colour::after {
-  background: #297825 url('./assets/images/icons/graduation.png') no-repeat center center;
+  background: #297825 url('./assets/images/icons/graduation.svg') no-repeat center center;
+  background-size: 30px 30px;
 }
 
 .single {
