@@ -170,7 +170,7 @@ li {
 .navbar__search {
   position: relative;
   height: 40px;
-  width: 400px;
+  width: 100%;
   margin-top: 40px;
 }
 

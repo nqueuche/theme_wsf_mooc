@@ -26,17 +26,17 @@ $logo           = wp_get_attachment_image_src( $custom_logo_id, 'full' );
     <div class="navbar">
         <div class="row">
             <div class="container">
-                <div class="col-xs-3">
+                <div class="col-xs-2">
                     <a class="navbar__logo" href="<?php echo home_url(); ?>">
                         <img src="<?php echo $logo[0] ?>"></a>
                 </div>
-            <div class="col-xs-3"></div>
-                <div class="col-xs-3">
+                <div class="col-xs-3"></div>
+                <div class="col-xs-5">
                     <form role="search"  method="get"  action="<?php echo home_url( '/' ); ?>" class="navbar__search">
-                        <input type="text" placeholder="Rechercher un cours" class="navbar__search__input"  name="s" id="s">
+                        <input type="text" placeholder="Rechercher..." class="navbar__search__input"  name="s" id="s">
                     </form>
                 </div>
-                <div class="col-xs-3 navbar__user">
+                <div class="col-xs-2 navbar__user">
                     <div class="navbar__user__image" style="background-image:url('assets/images/nina.jpg');">&nbsp;</div>
                 </div>
             </div>

@@ -33,8 +33,9 @@ get_header(); ?>
 					<?php if ( count( $taxonomyTypes ) > 0 ) : ?>
 
 						<?php foreach ( $taxonomyTypes as $taxonomyType ) : ?>
-							<?php array_push($postTerms, wp_get_post_terms($post->ID, $taxonomyType)[0]->slug); ?>
-
+							<?php $item = wp_get_post_terms($post->ID, $taxonomyType); ?>
+							<?php $item2 = $item[0]; ?>
+							<?php array_push($postTerms, $item2->slug); ?>
 						<?php endforeach; ?>
 
 

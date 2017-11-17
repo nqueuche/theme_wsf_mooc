@@ -100,17 +100,14 @@
 				$fieldTypes = get_field_objects( $post );
 				$postTerms = array();
 				$postClass = "";
-				//var_dump($taxonomyTypes);
 
 				?>
 				<?php if ( count( $taxonomyTypes ) > 0 ) : ?>
-
 					<?php foreach ( $taxonomyTypes as $taxonomyType ) : ?>
-						<?php array_push($postTerms, wp_get_post_terms($post->ID, $taxonomyType)[0]->slug); ?>
-
+                        <?php $item = wp_get_post_terms($post->ID, $taxonomyType); ?>
+                        <?php $item2 = $item[0]; ?>
+						<?php array_push($postTerms, $item2->slug); ?>
 					<?php endforeach; ?>
-
-
 				<?php endif; ?>
 
 				<?php if ( count( $fieldTypes ) > 0 ) : ?>
@@ -137,7 +134,7 @@
                                 </a>
                             </h4>
                             <div class="card-text showcase__item__description">
-								<?php the_excerpt() ?>
+								<?php the_excerpt(); ?>
                             </div>
                         </div>
                     </div>
@@ -153,4 +150,3 @@
 <?php get_footer(); ?>
 
 
-}
