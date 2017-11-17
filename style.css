@@ -27,6 +27,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
   margin-bottom: 100px;
   /* Added */ }
 
+
+
 nav .navbar-brand {
   padding: 0; }
   nav .navbar-brand img {
@@ -245,6 +247,7 @@ li {
 }
 
 .menu__list__item {
+  font-size: 11px;
   display: inline-block;
   background: #d1d1d1;
   color: #FFF;
@@ -283,6 +286,14 @@ li {
   padding: 0 0 10px 0;
 }
 
+.card-text.showcase__item__description {
+  font-size: 11px;
+  line-height: 16px;
+}
+
+h4.card-title {
+  font-size: 14px;
+}
 .showcase__item::after {
   content: '';
   position: absolute;
