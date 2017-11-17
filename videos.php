@@ -13,7 +13,7 @@ get_header(); ?>
         <div class="row">
             <div class="col-xs-12 text-center">
                 <h2>Qu'est ce que cette plateforme ?</h2>
-                <h4>Tu souhaiterai en savoir d'avantage sur le fonctionnement des MOOCs, c'est par ici !</h4>
+                <h4>Tu souhaiterais en savoir d'avantage sur le fonctionnement des MOOCs, c'est par ici !</h4>
                 <br>
             </div>
         </div>
@@ -43,7 +43,7 @@ get_header(); ?>
                         </div>
                         <div class="video-container item ">
                             <div class="youtube-video" id='1cfTpIBCUFY'></div>
-                            <div class="carousel-caption">Le soutien 6/6</div>
+                            <div class="carousel-caption">L'approfondissement 6/6</div>
                         </div>
                     </div>
                     <div class="controls">

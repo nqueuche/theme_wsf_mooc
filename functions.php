@@ -181,3 +181,14 @@ if( function_exists('acf_add_options_page') ) {
 	acf_add_options_page();
 
 }
+
+function searchfilter($query) {
+
+	if ($query->is_search && !is_admin() ) {
+		$query->set('post_type',array('course'));
+	}
+
+	return $query;
+}
+
+add_filter('pre_get_posts','searchfilter');

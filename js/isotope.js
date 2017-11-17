@@ -2,6 +2,12 @@ jQuery(function ($) {
 
     var filters = {};
 
+    $('.grid').isotope({
+        // options
+        itemSelector: '.item',
+        layoutMode: 'masonry'
+    });
+
     $('.filters').on( 'click', '.item', function() {
         var $this = $(this);
         // get group key
@@ -30,6 +36,8 @@ jQuery(function ($) {
             $( this ).addClass('selected');
         });
     });
+
+
 
 
 });

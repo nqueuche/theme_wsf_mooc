@@ -91,7 +91,7 @@
     <div class="col-sm-12 showcase__container">
 		<?php $the_query = new WP_Query( array(
 			'post_type' => 'course',
-			'posts_per_page=50'
+			'posts_per_page=-1'
 		) ); ?>
 		<?php if ( $the_query->have_posts() ) : ?>
         <div class="grid">
