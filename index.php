@@ -3,7 +3,7 @@
     <div class="announcement">
         <div class="row">
             <div class="col-md-12">
-                <a href="#">
+                <a href="/quest-ce-que-cette-plateforme/">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/mooc-img.png"  class="announcement__image"/>
                 </a>
             </div>
