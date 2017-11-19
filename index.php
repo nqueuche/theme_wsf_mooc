@@ -50,10 +50,7 @@
 					<?php endforeach; ?>
 				<?php endif; ?>
             </div>
-            <div class="col-xs-12 more">
-                <a type="button" class="glyphicon glyphicon-chevron-down center"  data-toggle="collapse" data-target="#advanced"></a>
-            </div>
-            <div id="advanced" class="collapse">
+            <div class="row menu__details hidden">
 				<?php if ( count( $fieldTypes ) > 0 ) : ?>
 					<?php foreach ( $fieldTypes as $fieldType ) : ?>
 						<?php $fieldTerms = $fieldType['choices'];?>
@@ -79,7 +76,9 @@
 
 					<?php endforeach; ?>
 				<?php endif; ?>
+
             </div>
+            <div class="menu__hook">&nbsp;</div>
         </div>
     </div>
 </div>
@@ -145,7 +144,6 @@
 
     </div>
 </div>
-
 
 <?php get_footer(); ?>
 

@@ -192,3 +192,4 @@ function searchfilter($query) {
 }
 
 add_filter('pre_get_posts','searchfilter');
+

@@ -342,6 +342,10 @@ h4.card-title {
   background-size: 30px 30px;
 }
 
+.design_selected {
+  background: #ea5b0c;
+}
+
 .marketing .showcase__colour {
   border-color: #0000ff;
 }
@@ -361,6 +365,33 @@ h4.card-title {
   background-size: 30px 30px;
 }
 
+.marketing_selected {
+  background: #0000ff;
+}
+
+.me .showcase__colour {
+  border-color: #8204FF;
+}
+
+.me.approfondissement .showcase__colour::after {
+  background: #8204FF url('./assets/images/icons/medal.svg') no-repeat center center;
+  background-size: 30px 30px;
+}
+
+.me.soutien .showcase__colour::after {
+  background: #8204FF url('./assets/images/icons/intelligence.svg') no-repeat center center;
+  background-size: 30px 30px;
+}
+
+.me.substitution .showcase__colour::after {
+  background: #8204FF url('./assets/images/icons/graduation.svg') no-repeat center center;
+  background-size: 30px 30px;
+}
+
+.me_selected {
+  background: #8204FF;
+}
+
 .tech .showcase__colour {
   border-color: #297825;
 }
@@ -378,6 +409,10 @@ h4.card-title {
 .tech.substitution .showcase__colour::after {
   background: #297825 url('./assets/images/icons/graduation.svg') no-repeat center center;
   background-size: 30px 30px;
+}
+
+.tech_selected {
+  background: #297825;
 }
 
 .single {
@@ -479,6 +514,8 @@ padding-top: 20px;
 button {
    border: none;
  }
+
+/*Video page*/
 
 .video-container {
   position: relative; /* keeps the aspect ratio */
@@ -631,14 +668,28 @@ button {
   }
 }
 
-.test {
-  background-color: blue;
-}
-
 .grid {
   overflow: auto;
 }
 
+.menu__hook {
+  position: absolute;
+  z-index: 10;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 10px;
+  width: 110px;
+  background: #bdbdbd;
+  border-radius: 0 0 10px 10px;
+  cursor: pointer;
+}
+
+.menu__details {
+  border-top:  1px solid #bdbdbd;
+  margin-top: 15px;
+  padding-top: 15px;
+}
 
 
 /* End: Recommended Isotope styles */
