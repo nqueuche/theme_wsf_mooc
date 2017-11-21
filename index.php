@@ -1,15 +1,17 @@
 <?php get_header(); ?>
 <div class="container">
-    <div class="announcement">
         <div class="row">
             <div class="col-md-12">
-                <a href="/quest-ce-que-cette-plateforme/">
+
+            <a href="/quest-ce-que-cette-plateforme/">
+                <div class="announcement">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/mooc-img.png"  class="announcement__image"/>
-                </a>
+                </div>
+            </a>
             </div>
 
+
         </div>
-    </div>
 
 
     <div class="menu">
@@ -27,7 +29,7 @@
                         <ul class="filters menu__list col-sm-4" data-filter-group="<?php echo $taxonomyType ?>">
                             <b class="menu__title"><?php echo ucwords(str_replace('_', ' ', $taxonomyType)); ?></b>
                             <li>
-                                <button data-filter="" class="item menu__list__item">
+                                <button data-filter="" class="item menu__list__item selected">
                                     Tout
                                 </button>
                             </li>
@@ -57,7 +59,7 @@
                         <ul class="filters menu__list col-sm-3" data-filter-group="<?php echo $fieldType['name'] ?>">
                             <b class="menu__title"><?php echo $fieldType['label'] ?></b>
                             <li>
-                                <button data-filter="" class="item menu__list__item">
+                                <button data-filter="" class="item menu__list__item selected">
                                     Tout
                                 </button>
                             </li>

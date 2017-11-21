@@ -121,11 +121,15 @@ add_action( 'widgets_init', 'moocable_widgets_init' );
 function moocable_scripts() {
 	wp_enqueue_style( 'moocable-bootstrap', '//bootswatch.com/3/paper/bootstrap.min.css');
 	wp_enqueue_style( 'moocable-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'moocable-slick', '//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css');
+	wp_enqueue_style( 'moocable-slick-theme', '//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css');
 
 	wp_enqueue_script( 'moocable-tether', '//cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js', array(), '20151215', true );
 	wp_enqueue_script( 'moocable-js', '//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', array('jquery', 'moocable-tether'), '20151215', true );
 	wp_enqueue_script( 'moocable-isotope', '//cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js', array('jquery'), '20151215', true );
 	wp_enqueue_script( 'moocable-isotope-init', get_template_directory_uri() . '/js/isotope.js', array('jquery'), '20151215', true );
+	wp_enqueue_script( 'moocable-slick-js', '//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js');
+
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -193,3 +197,13 @@ function searchfilter($query) {
 
 add_filter('pre_get_posts','searchfilter');
 
+
+// Only admin users can see wordpress bar
+
+add_action('after_setup_theme', 'remove_admin_bar');
+
+function remove_admin_bar() {
+	if (!current_user_can('administrator', 'editor', 'author') && !is_admin()) {
+		show_admin_bar(false);
+	}
+}
